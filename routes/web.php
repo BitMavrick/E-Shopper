@@ -24,3 +24,7 @@ Route::get('/shop', function () {
 Route::get('/product', function () {
     return view('user.product');
 });
+
+Route::get('/cart', function () {
+    return view('user.cart');
+});
