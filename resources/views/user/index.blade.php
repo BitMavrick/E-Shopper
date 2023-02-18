@@ -1,4 +1,9 @@
 <x-user.master>
+
+    <x-slot name="title">
+        {{ $title ?? 'Home | E-Shopper' }}
+    </x-slot>
+
     <x-user.partials.topbar />
     <x-user.partials.navbar />
     <x-user.partials.featured />
