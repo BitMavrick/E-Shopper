@@ -4,6 +4,7 @@
         {{ $title ?? 'Shop | E-Shopper' }}
     </x-slot>
 
+    <x-user.partials.register />
     <x-user.partials.topnav />
     <x-user.partials.header />
 

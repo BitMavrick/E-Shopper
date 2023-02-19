@@ -7,11 +7,14 @@
         {{ $title ?? 'Welcome | E-Shopper'}}
     </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="Free HTML Templates" name="keywords" />
-    <meta content="Free HTML Templates" name="description" />
+    <meta content="E-Shopper" name="E-Shopper is a multi-vendors type e-commerce website" />
 
     <!-- Favicon -->
     <link href="/user/img/icon.svg" rel="icon" />
+
+    <!-- Start my links here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- End my links here -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -25,6 +28,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="/user/css/style.css" rel="stylesheet" />
+
+
+
 </head>
 
 <body>
@@ -33,6 +39,11 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- Start my links here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- End my links here -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -46,6 +57,8 @@
 
     <!-- Template Javascript -->
     <script src="/user/js/main.js"></script>
+
+
 </body>
 
 </html>
