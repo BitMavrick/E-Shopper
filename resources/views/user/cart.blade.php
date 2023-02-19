@@ -1,7 +1,7 @@
 <x-user.master>
 
     <x-slot name="title">
-        {{ $title ?? 'Product | E-Shopper' }}
+        {{ $title ?? 'Cart | E-Shopper' }}
     </x-slot>
 
     <x-user.partials.topnav />
