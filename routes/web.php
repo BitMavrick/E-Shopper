@@ -21,3 +21,7 @@ Route::get('/cart', function () {
 Route::get('/checkout', function () {
     return view('user.checkout');
 });
+
+Route::get('/contact', function () {
+    return view('user.contact');
+});
