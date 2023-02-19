@@ -19,11 +19,7 @@
         </div>
 
         <p class="text-muted mt-4">Note: <em>Please keep in mind that if you do not have any account with given details
-                then it will create a
-                new
-                account for you.</em></p>
-
-
+                then it will create a new account for you.</em></p>
     </div>
 </div>
 <!-- Offcanvas end  -->
