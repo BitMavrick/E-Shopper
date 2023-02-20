@@ -10,7 +10,7 @@
 
         <div class="pt-5 pb-5">
             <div class="d-flex justify-content-center">
-                <a href="#" class="btn btn-primary py-3 m-3" style="width: 100%;">Google</a>
+                <a href="{{ route('google.auth') }}" class="btn btn-primary py-3 m-3" style="width: 100%;">Google</a>
             </div>
 
             <div class="d-flex justify-content-center">
