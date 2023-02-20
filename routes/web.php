@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleAuthController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,11 @@ use App\Http\Controllers\GoogleAuthController;
 Route::get('/auth/google', [GoogleAuthController::class, 'redirect'])->name('google.auth');
 Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
-Route::get('/', function () {
-    return view('user.index');
-});
+Route::get('/', [HomeController::class, 'home'])->name('home');
+
+// Route::get('/', function () {
+//     return view('user.index');
+// });
 
 Route::get('/shop', function () {
     return view('user.shop');

@@ -32,11 +32,11 @@ class GoogleAuthController extends Controller
 
                 Auth::login($new_user);
 
-                dd('registration done');
+                return redirect()->route('home');
             } else {
                 Auth::login($user);
 
-                dd('login done');
+                return redirect()->route('home');
             }
         } catch (\Throwable $e) {
             dd($e->getMessage());
