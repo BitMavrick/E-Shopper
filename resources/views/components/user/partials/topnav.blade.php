@@ -121,21 +121,26 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="navbar-nav ml-auto py-0">
-                            @if(Auth::user())
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name}}</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Profile</a>
+                        @if(Auth::user())
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown">{{ Auth::user()->name}}</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="cart.html" class="dropdown-item">Manage Account</a>
+                                <a href="cart.html" class="dropdown-item">Orders</a>
+                                <a href="cart.html" class="dropdown-item">Wishlist</a>
+                                <a href="cart.html" class="dropdown-item">Reviews</a>
 
-                                    <form action="{{route('logout')}}" method="POST">
-                                        @csrf
-                                        <button type="submit" class="dropdown-item">Sign Out</button>
-                                    </form>
-                                </div>
+                                <form action="{{route('logout')}}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Sign Out</button>
+                                </form>
                             </div>
-                            @else
-                            <a href="" class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Login/Register</a>
-                            @endif
+                        </div>
+                        @else
+                        <a href="" class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight">Login/Register</a>
+                        @endif
                     </div>
                 </div>
             </nav>
