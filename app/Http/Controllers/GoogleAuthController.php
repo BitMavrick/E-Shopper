@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Redirect;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 
 class GoogleAuthController extends Controller
 {
     public function redirect()
     {
+        // This will redirect the user where I started authentication. This saves the route for redirecting after authentication.
+        Redirect::setIntendedUrl(url()->previous());
+
         return Socialite::driver('google')->redirect();
     }
 
@@ -32,11 +37,14 @@ class GoogleAuthController extends Controller
 
                 Auth::login($new_user);
 
-                return redirect()->route('home');
+                // This will redirect the user where I started authentication
+                return redirect()->intended(RouteServiceProvider::HOME);
+                
             } else {
                 Auth::login($user);
-
-                return redirect()->route('home');
+                
+                // This will redirect the user where I started authentication
+                return redirect()->intended(RouteServiceProvider::HOME);
             }
         } catch (\Throwable $e) {
             dd($e->getMessage());

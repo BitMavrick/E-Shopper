@@ -131,15 +131,16 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name}}</a>
                                 <div class="dropdown-menu rounded-0 m-0">
                                     <a href="cart.html" class="dropdown-item">Profile</a>
-                                    <a href="checkout.html" class="dropdown-item">Sign Out</a>
+
+                                    <form action="{{route('logout')}}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Sign Out</button>
+                                    </form>
                                 </div>
                             </div>
-
                             @else
                             <a href="" class="nav-item nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Login/Register</a>
-
                             @endif
-                            
                         </div>
                     </div>
                 </nav>

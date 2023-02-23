@@ -19,7 +19,13 @@ Route::get('/auth/google/call-back', [GoogleAuthController::class, 'callbackGoog
 */
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
+Route::get('/product', [HomeController::class, 'product'])->name('product');
+Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
+/*
 Route::get('/shop', function () {
     return view('user.shop');
 });
@@ -39,5 +45,6 @@ Route::get('/checkout', function () {
 Route::get('/contact', function () {
     return view('user.contact');
 });
+*/
 
 require __DIR__ . '/auth.php';
