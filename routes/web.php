@@ -25,6 +25,10 @@ Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
+Route::get('/super', function () {
+    return view('admin.index');
+});
+
 /*
 Route::get('/shop', function () {
     return view('user.shop');
