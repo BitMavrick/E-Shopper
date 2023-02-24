@@ -86,10 +86,11 @@
     <div class="row border-top border-light mx-xl-5 py-4">
         <div class="col-md-6 px-xl-0">
             <p class="mb-md-0 text-center text-md-left text-dark">
-                &copy;
+                <span id="currentYear"></span> &copy;
                 <a class="text-dark font-weight-semi-bold" href="#">Your Site Name</a>. All Rights Reserved.
-                Designed by
-                <a class="text-dark font-weight-semi-bold" href="https://htmlcodex.com">HTML Codex</a><br />
+                Developed By
+                <a class="text-dark font-weight-semi-bold" href="https://github.com/TheAlter71" target="_blank">Mehedi
+                    Hasan</a><br />
                 Distributed By
                 <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
             </p>
@@ -99,3 +100,8 @@
         </div>
     </div>
 </div>
+
+<script>
+const currentYear = new Date().getFullYear();
+document.getElementById("currentYear").textContent = currentYear;
+</script>
