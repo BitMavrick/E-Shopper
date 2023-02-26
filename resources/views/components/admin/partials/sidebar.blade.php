@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="user-profile">
         <div class="user-image">
-            <img src="images/faces/face28.png">
+            <img src="admin/images/faces/face28.png">
         </div>
         <div class="user-name">
             Edward Spencer
@@ -16,6 +16,38 @@
                 <i class="icon-box menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
             </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#users" aria-expanded="false" aria-controls="auth">
+                <i class="icon-head menu-icon"></i>
+                <span class="menu-title">Users Activity</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="users">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#"> Users </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Sellers
+                        </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Admins
+                        </a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false" aria-controls="auth">
+                <i class="icon-command menu-icon"></i>
+                <span class="menu-title">Products Activity</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="products">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#"> Products </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Shops </a></li>
+                </ul>
+            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -43,39 +75,14 @@
                 <span class="menu-title">Charts</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-                <i class="icon-command menu-icon"></i>
-                <span class="menu-title">Tables</span>
-            </a>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="pages/icons/feather-icons.html">
                 <i class="icon-help menu-icon"></i>
                 <span class="menu-title">Icons</span>
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <i class="icon-head menu-icon"></i>
-                <span class="menu-title">User Pages</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2
-                        </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register
-                        </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register
-                            2 </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html">
-                            Lockscreen </a></li>
-                </ul>
-            </div>
-        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="docs/documentation.html">
                 <i class="icon-book menu-icon"></i>

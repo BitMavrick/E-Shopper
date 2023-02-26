@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Reporter | Admin</title>
+
+    <title>{{ $title ?? 'Admin | E-Shopper'}}</title>
     <!-- base:css -->
     <link rel="stylesheet" href="admin/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="admin/vendors/feather/feather.css">
@@ -20,12 +21,30 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="admin/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="admin/images/favicon.png" />
+    <link href="/user/img/icon.svg" rel="icon" />
 </head>
 
 <body>
-    {{ $slot }}
 
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <x-admin.partials.navbar />
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <x-admin.partials.sidebar />
+            <!-- partial -->
+            <div class="main-panel">
+                {{ $slot }}
+                <!-- content-wrapper ends -->
+                <x-admin.partials.footer />
+                <!-- partial:partials/_footer.html -->
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
     <!-- container-scroller -->
 
     <!-- base:js -->
