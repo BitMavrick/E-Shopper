@@ -110,10 +110,4 @@
       }
     });
   });
-
-  // focus input when clicking on search icon
-  $('#navbar-search-icon').click(function() {
-    $("#navbar-search-input").focus();
-  });
-  
 })(jQuery);
