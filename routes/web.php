@@ -29,6 +29,8 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 // Admin routes
 Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
 Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');
+Route::get('/super/sellers', [AdminController::class, 'sellers'])->name('admin.sellers');
+Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.admins');
 
 /*
 Route::get('/shop', function () {

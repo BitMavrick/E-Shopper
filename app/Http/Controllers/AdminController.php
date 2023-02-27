@@ -19,4 +19,20 @@ class AdminController extends Controller
         view()->share('users', $users);
         return view('admin.users');
     }
+
+    public function sellers()
+    {
+        $users = User::where('type', 'seller')->get();
+
+        view()->share('users', $users);
+        return view('admin.sellers');
+    }
+
+    public function admins()
+    {
+        $users = User::where('type', 'admin')->get();
+
+        view()->share('users', $users);
+        return view('admin.admins');
+    }
 }

@@ -27,9 +27,9 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('admin.users') }}"> Users </a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Sellers
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.sellers') }}"> Sellers
                         </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Admins
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.admins') }}"> Admins
                         </a></li>
                 </ul>
             </div>

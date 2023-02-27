@@ -7,7 +7,7 @@
         <div class="card-body">
             <h4 class="card-title">Users List</h4>
             <p class="card-description">
-                Total users: <code>4321</code>
+                Total users: <code> {{ count($users) }} </code>
             </p>
             <div class="table-responsive">
                 <table class="table table-striped">
