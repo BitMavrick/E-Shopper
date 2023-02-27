@@ -5,56 +5,66 @@
 
     <div class="content-wrapper">
         <div class="card-body">
-            <h4 class="card-title">Basic Table</h4>
+            <h4 class="card-title">Users List</h4>
             <p class="card-description">
-                Add class <code>.table</code>
+                Total users: <code>4321</code>
             </p>
             <div class="table-responsive">
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Profile</th>
-                            <th>VatNo.</th>
-                            <th>Created</th>
-                            <th>Status</th>
+                            <th>
+                                PK
+                            </th>
+                            <th>
+                                User
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Joining Date
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
+
+                        @foreach($users as $user)
                         <tr>
-                            <td>Jacob</td>
-                            <td>53275531</td>
-                            <td>12 May 2017</td>
-                            <td><label class="badge badge-danger">Pending</label></td>
+                            <td>{{ $user->id }}</td>
+                            <td class="py-1">
+                                <img src="{{ $user->avatar }}" alt="users image" />
+                            </td>
+                            <td>
+                                <a href="#">{{ $user->name }}</a>
+                            </td>
+                            <td>
+                                {{ $user->email }}
+                            </td>
+                            <td>
+                                @if($user->status == 'nor')
+                                <label class="badge badge-info">Normal</label>
+                                @elseif($user->status == 'ver')
+                                <label class="badge badge-success">Verified</label>
+                                @elseif($user->status == 'ban')
+                                <label class="badge badge-danger">Banned</label>
+                                @endif
+                            </td>
+                            <td>
+                                {{ $user->created_at }}
+                            </td>
                         </tr>
-                        <tr>
-                            <td>Messsy</td>
-                            <td>53275532</td>
-                            <td>15 May 2017</td>
-                            <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
-                        <tr>
-                            <td>John</td>
-                            <td>53275533</td>
-                            <td>14 May 2017</td>
-                            <td><label class="badge badge-info">Fixed</label></td>
-                        </tr>
-                        <tr>
-                            <td>Peter</td>
-                            <td>53275534</td>
-                            <td>16 May 2017</td>
-                            <td><label class="badge badge-success">Completed</label></td>
-                        </tr>
-                        <tr>
-                            <td>Dave</td>
-                            <td>53275535</td>
-                            <td>20 May 2017</td>
-                            <td><label class="badge badge-warning">In progress</label></td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
 
 </x-admin.master>
