@@ -12,7 +12,7 @@
     </div>
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ route('admin.home') }}">
                 <i class="icon-box menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
             </a>
@@ -25,7 +25,7 @@
             </a>
             <div class="collapse" id="users">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="#"> Users </a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('admin.users') }}"> Users </a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="#"> Sellers
                         </a></li>

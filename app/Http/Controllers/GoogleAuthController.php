@@ -33,16 +33,16 @@ class GoogleAuthController extends Controller
                     'name' => $google_user->getName(),
                     'email' => $google_user->getEmail(),
                     'social_id' => $google_user->getId(),
+                    'avatar' => $google_user->getAvatar(),
                 ]);
 
                 Auth::login($new_user);
 
                 // This will redirect the user where I started authentication
                 return redirect()->intended(RouteServiceProvider::HOME);
-                
             } else {
                 Auth::login($user);
-                
+
                 // This will redirect the user where I started authentication
                 return redirect()->intended(RouteServiceProvider::HOME);
             }
