@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 Route::get('/', function () {
@@ -25,9 +26,9 @@ Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
-Route::get('/super', function () {
-    return view('admin.index');
-});
+// Admin routes
+Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
+Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');
 
 /*
 Route::get('/shop', function () {

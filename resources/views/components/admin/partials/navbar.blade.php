@@ -1,7 +1,9 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.html"><img src="admin/images/logo.svg" alt="logo" /></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo" href="index.html">
+            <h4 style="color: aliceblue;">E-Shopper | Admin</h4>
+        </a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="/user/img/icon.svg" alt="logo" /></a>
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -15,8 +17,7 @@
                             <i class="icon-search"></i>
                         </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Search Projects.." aria-label="search"
-                        aria-describedby="search">
+                    <input type="text" class="form-control" placeholder="Search Projects.." aria-label="search" aria-describedby="search">
                 </div>
             </li>
         </ul>
@@ -25,12 +26,10 @@
                 <button type="button" class="btn btn-info font-weight-bold">+ Create New</button>
             </li>
             <li class="nav-item dropdown d-flex">
-                <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
-                    id="messageDropdown" href="#" data-toggle="dropdown">
+                <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
                     <i class="icon-air-play mx-0"></i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                    aria-labelledby="messageDropdown">
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
                     <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                     <a class="dropdown-item preview-item">
                         <div class="preview-thumbnail">
@@ -71,12 +70,10 @@
                 </div>
             </li>
             <li class="nav-item dropdown d-flex mr-4 ">
-                <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center"
-                    id="notificationDropdown" href="#" data-toggle="dropdown">
+                <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown">
                     <i class="icon-cog"></i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                    aria-labelledby="notificationDropdown">
+                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                     <p class="mb-0 font-weight-normal float-left dropdown-header">Settings</p>
                     <a class="dropdown-item preview-item">
                         <i class="icon-head"></i> Profile
@@ -92,8 +89,7 @@
                 </a>
             </li>
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-            data-toggle="offcanvas">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="icon-menu"></span>
         </button>
     </div>
