@@ -16,7 +16,6 @@ class Category extends Model
         'slug',
     ];
 
-    // One to many relationship for getting the shops owned by the user
     public function product()
     {
         return $this->hasMany(Product::class);

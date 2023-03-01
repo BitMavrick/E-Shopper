@@ -26,7 +26,11 @@ class Shop extends Model
         'youtube',
     ];
 
-    // Reverse relationship for getting the user who owns the shop form shop id
+    public function product()
+    {
+        return $this->hasMany(Product::class);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -34,7 +34,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    // One to many relationship for getting the shops owned by the user
     public function shop()
     {
         return $this->hasMany(Shop::class);
