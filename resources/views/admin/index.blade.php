@@ -65,9 +65,7 @@
                         <div class="d-flex justify-content-between mb-3">
                             <h4 class="card-title">Market Trends</h4>
                             <div class="dropdown">
-                                <button class="btn btn-sm dropdown-toggle text-dark pt-0 pr-0" type="button"
-                                    id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
+                                <button class="btn btn-sm dropdown-toggle text-dark pt-0 pr-0" type="button" id="dropdownMenuSizeButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     This week
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuSizeButton3">
@@ -105,18 +103,12 @@
                                     <div>Goal: 2000</div>
                                 </div>
                                 <div class="progress progress-md grouped mb-2">
-                                    <div class="progress-bar  bg-danger" role="progressbar" style="width: 30%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%"
-                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    <div class="progress-bar  bg-primary" role="progressbar" style="width: 10%"
-                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 10%"
-                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 5%"
-                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    <div class="progress-bar bg-light" role="progressbar" style="width: 25%"
-                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar  bg-danger" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar  bg-primary" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 5%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-light" role="progressbar" style="width: 25%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="col-sm-12">
@@ -253,9 +245,7 @@
                                             <div class="row">
                                                 <div class="col-sm-10">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-2">
@@ -280,9 +270,7 @@
                                             <div class="row">
                                                 <div class="col-sm-10">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="25" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-2">
@@ -307,9 +295,7 @@
                                             <div class="row">
                                                 <div class="col-sm-10">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 10%" aria-valuenow="25" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 10%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-2">
@@ -333,9 +319,7 @@
                                             <div class="row">
                                                 <div class="col-sm-10">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 70%" aria-valuenow="25" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-2">
@@ -360,9 +344,7 @@
                                             <div class="row">
                                                 <div class="col-sm-10">
                                                     <div class="progress">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 60%" aria-valuenow="25" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-2">
@@ -412,8 +394,7 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="progress progress-lg mt-1">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 80%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 p-lg-0">
@@ -437,8 +418,7 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="progress progress-lg mt-1">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 45%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 p-lg-0">
@@ -462,8 +442,7 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="progress progress-lg mt-1">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 p-lg-0">
@@ -487,8 +466,7 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="progress progress-lg mt-1">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 8%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 8%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 p-lg-0">
@@ -512,8 +490,7 @@
                                 <div class="row">
                                     <div class="col-sm-10">
                                         <div class="progress progress-lg mt-1">
-                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 1%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 1%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-2 p-lg-0">
