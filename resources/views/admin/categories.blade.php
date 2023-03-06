@@ -10,6 +10,8 @@
                 Total categories: <code> {{ count($categories) }} </code>
             </p>
 
+            <button type="button" class="btn btn-info font-weight-bold my-4">+ Create New</button>
+
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -21,13 +23,13 @@
                                 Title
                             </th>
                             <th>
+                                Total Items
+                            </th>
+                            <th>
                                 Progress
                             </th>
                             <th>
                                 Total Sale
-                            </th>
-                            <th>
-                                Status
                             </th>
                             <th>
                                 Action
@@ -44,6 +46,10 @@
                             </td>
 
                             <td>
+                                <strong> {{ count($category->product) }} </strong>
+                            </td>
+
+                            <td>
                                 <div class="progress">
                                     <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
                                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -52,11 +58,16 @@
                             <td>
                                 $0
                             </td>
+
                             <td>
-                                <label class="badge badge-success">Active</label>
-                            </td>
-                            <td>
-                                <button class="btn btn-info">See more</button>
+                                <button class="btn btn-info mr-3">Update</button>
+                                @if( count($category->product) == 0)
+                                <button class="btn btn-danger">Remove</button>
+                                @else
+                                <button type="button" disabled class="btn btn-danger">
+                                    Remove
+                                </button>
+                                @endif
                             </td>
                         </tr>
                         @endforeach
