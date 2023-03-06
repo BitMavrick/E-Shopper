@@ -21,7 +21,13 @@
                                 Title
                             </th>
                             <th>
-                                Progress
+                                Price
+                            </th>
+                            <th>
+                                Category
+                            </th>
+                            <th>
+                                Shop
                             </th>
                             <th>
                                 Total Sale
@@ -44,11 +50,17 @@
                             </td>
 
                             <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
-                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                <strong> {{ $product->price }} BDT</strong>
                             </td>
+
+                            <td>
+                                <strong> {{ $product->category->name }}</strong>
+                            </td>
+
+                            <td>
+                                <strong> {{ $product->shop->name }} </strong>
+                            </td>
+
                             <td>
                                 $0
                             </td>
