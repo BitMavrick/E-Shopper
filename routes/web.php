@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
@@ -21,5 +23,13 @@ Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.adm
 
 // category resource route
 Route::resource('categories', CategoryController::class);
+
+// shop resource route
+Route::resource('shops', ShopController::class);
+
+// product resource route
+Route::resource('products', ProductController::class);
+
+
 
 require __DIR__ . '/auth.php';
