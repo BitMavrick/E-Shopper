@@ -10,6 +10,11 @@
                 Total Shops: <code> {{ count($shops) }} </code>
             </p>
 
+            <a href="{{ route('shops.create') }}" class="btn btn-info font-weight-bold my-4">
+                + Create
+                New
+            </a>
+
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -45,8 +50,7 @@
 
                             <td>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
-                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </td>
                             <td>

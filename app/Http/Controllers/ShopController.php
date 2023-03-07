@@ -13,4 +13,9 @@ class ShopController extends Controller
         view()->share('shops', $shops);
         return view('admin.shops');
     }
+
+    public function create()
+    {
+        return view('admin.shop-create');
+    }
 }
