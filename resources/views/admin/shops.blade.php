@@ -26,7 +26,10 @@
                                 Title
                             </th>
                             <th>
-                                Total Products
+                                Status
+                            </th>
+                            <th>
+                                Products
                             </th>
                             <th>
                                 Progress
@@ -47,6 +50,14 @@
                             <td>{{ $shop->id }}</td>
                             <td>
                                 <strong> {{ $shop->name }}</strong>
+                            </td>
+
+                            <td>
+                                @if($shop->verified == 0)
+                                <label class="badge badge-info">Normal</label>
+                                @elseif($shop->verified == 1)
+                                <label class="badge badge-success">Verified</label>
+                                @endif
                             </td>
 
                             <td>
