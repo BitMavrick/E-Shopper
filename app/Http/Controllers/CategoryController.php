@@ -29,6 +29,21 @@ class CategoryController extends Controller
         return redirect()->route('categories.index');
     }
 
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+
+        $category = Category::find($id);
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+        $category->save();
+
+        return redirect()->route('categories.index');
+    }
+
     public function destroy($id)
     {
         $category = Category::find($id);
