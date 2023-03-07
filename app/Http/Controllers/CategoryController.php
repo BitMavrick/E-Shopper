@@ -13,4 +13,26 @@ class CategoryController extends Controller
         view()->share('categories', $categories);
         return view('admin.categories');
     }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'slug' => 'required',
+        ]);
+
+        $category = new Category();
+        $category->name = $request->name;
+        $category->slug = $request->slug;
+        $category->save();
+
+        return redirect()->route('categories.index');
+    }
+
+    public function destroy($id)
+    {
+        $category = Category::find($id);
+        $category->delete();
+        return redirect()->route('categories.index');
+    }
 }

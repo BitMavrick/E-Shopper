@@ -10,7 +10,46 @@
                 Total categories: <code> {{ count($categories) }} </code>
             </p>
 
-            <button type="button" class="btn btn-info font-weight-bold my-4">+ Create New</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-info font-weight-bold my-4" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                + Create
+                New
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">New Categoty</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{ route('categories.store') }}" method="post">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input type="text" name="name" class="form-control" id="title"
+                                        aria-describedby="emailHelp" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="slug" class="form-label">Slug</label>
+                                    <input type="text" name="slug" class="form-control" id="slug"
+                                        aria-describedby="emailHelp" required>
+                                    <div id="emailHelp" class="form-text">Write little something about the category.
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-info">Create</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -20,19 +59,19 @@
                                 PK
                             </th>
                             <th>
-                                Title
+                                Title & Slug
                             </th>
                             <th>
                                 Total Items
                             </th>
                             <th>
-                                Progress
+                                Sales graph
                             </th>
                             <th>
                                 Total Sale
                             </th>
                             <th>
-                                Action
+                                Actions
                             </th>
                         </tr>
                     </thead>
@@ -42,7 +81,7 @@
                         <tr>
                             <td>{{ $category->id }}</td>
                             <td>
-                                <strong> {{ $category->name }}</strong>
+                                <strong> {{ $category->name }} </strong> ({{ $category->slug }})
                             </td>
 
                             <td>
@@ -60,10 +99,19 @@
                             </td>
 
                             <td>
-                                <button class="btn btn-info mr-3">Update</button>
+
                                 @if( count($category->product) == 0)
-                                <button class="btn btn-danger">Remove</button>
+                                <form action="{{ route('categories.destroy', $category->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-info mr-3">Update</button>
+                                    <button class="btn btn-danger" type="submit"
+                                        onclick="return confirm('Are you sure you want to delete this category?')">Remove</button>
+                                </form>
+
+
                                 @else
+                                <button class="btn btn-info mr-3">Update</button>
                                 <button type="button" disabled class="btn btn-danger">
                                     Remove
                                 </button>
