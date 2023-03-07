@@ -26,14 +26,15 @@
                                 Title
                             </th>
                             <th>
+                                Total Products
+                            </th>
+                            <th>
                                 Progress
                             </th>
                             <th>
-                                Total Sale
+                                Total Sales
                             </th>
-                            <th>
-                                Status
-                            </th>
+
                             <th>
                                 Action
                             </th>
@@ -49,6 +50,10 @@
                             </td>
 
                             <td>
+                                {{ count($shop->product) }}
+                            </td>
+
+                            <td>
                                 <div class="progress">
                                     <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -56,9 +61,7 @@
                             <td>
                                 $0
                             </td>
-                            <td>
-                                <label class="badge badge-success">Active</label>
-                            </td>
+
                             <td>
                                 <button class="btn btn-info">See more</button>
                             </td>

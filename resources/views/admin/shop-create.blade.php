@@ -12,8 +12,8 @@
                 <- Go to List </a>
                     <hr>
 
-                    <form class="forms-sample">
-
+                    <form class="forms-sample" action="{{ route('shops.store') }}" method="post">
+                        @csrf
                         <div class="form-group row">
                             <label for="exampleSelectGender" class="col-sm-3 col-form-label">Owner</label>
 
@@ -69,8 +69,8 @@
                             <div class="col-sm-4">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="membershipRadios"
-                                            id="membershipRadios1" value="" checked />
+                                        <input type="radio" class="form-check-input" name="verified"
+                                            id="membershipRadios1" value="0" checked />
                                         Normal
                                     </label>
                                 </div>
@@ -78,8 +78,8 @@
                             <div class="col-sm-5">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="membershipRadios"
-                                            id="membershipRadios2" value="option2" />
+                                        <input type="radio" class="form-check-input" name="verified"
+                                            id="membershipRadios2" value="1" />
                                         Verified
                                     </label>
                                 </div>
