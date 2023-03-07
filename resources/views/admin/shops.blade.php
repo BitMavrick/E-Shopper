@@ -63,7 +63,7 @@
                             </td>
 
                             <td>
-                                <button class="btn btn-info">See more</button>
+                                <a class="btn btn-info" href="{{ route('shops.edit', $shop->id) }}">See more</a>
                             </td>
                         </tr>
                         @endforeach

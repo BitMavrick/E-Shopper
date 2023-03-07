@@ -30,37 +30,32 @@
                         <div class="form-group row">
                             <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Shop Title</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="exampleInputUsername2"
-                                    placeholder="Enter shop title" name="name" />
+                                <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Enter shop title" name="name" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Slug</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="exampleInputEmail2" name="slug"
-                                    placeholder="Short motive about the shop" />
+                                <input type="text" class="form-control" id="exampleInputEmail2" name="slug" placeholder="Short motive about the shop" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="exampleInputAddress" class="col-sm-3 col-form-label">Address</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="exampleInputAddress" name="address"
-                                    placeholder="Physical Shop address" />
+                                <input type="text" class="form-control" id="exampleInputAddress" name="address" placeholder="Physical Shop address" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" name="phone" id="exampleInputMobile"
-                                    placeholder="Mobile number" />
+                                <input type="text" class="form-control" name="phone" id="exampleInputMobile" placeholder="Mobile number" />
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="exampleInputEmail" class="col-sm-3 col-form-label">Email</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="exampleInputEmail" name="email"
-                                    placeholder="Email for shop" />
+                                <input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="Email for shop" />
                             </div>
                         </div>
 
@@ -69,8 +64,7 @@
                             <div class="col-sm-4">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="verified"
-                                            id="membershipRadios1" value="0" checked />
+                                        <input type="radio" class="form-check-input" name="verified" id="membershipRadios1" value="0" checked />
                                         Normal
                                     </label>
                                 </div>
@@ -78,8 +72,7 @@
                             <div class="col-sm-5">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="verified"
-                                            id="membershipRadios2" value="1" />
+                                        <input type="radio" class="form-check-input" name="verified" id="membershipRadios2" value="1" />
                                         Verified
                                     </label>
                                 </div>

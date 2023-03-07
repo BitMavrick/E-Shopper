@@ -55,4 +55,29 @@ class ShopController extends Controller
         view()->share('shop', $shop);
         return view('admin.shop-edit');
     }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'user_id' => 'required',
+            'name' => 'required',
+            'slug' => 'required',
+            'address' => 'required',
+            'phone' => 'required',
+            'verified' => 'required',
+            'email' => 'required',
+        ]);
+
+        $shop = Shop::find($id);
+        $shop->user_id = $request->user_id;
+        $shop->name = $request->name;
+        $shop->slug = $request->slug;
+        $shop->address = $request->address;
+        $shop->phone = $request->phone;
+        $shop->verified = $request->verified;
+        $shop->email = $request->email;
+        $shop->save();
+
+        return redirect()->route('shops.index');
+    }
 }
