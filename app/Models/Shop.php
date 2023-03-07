@@ -15,9 +15,9 @@ class Shop extends Model
         'user_id',
         'name',
         'slug',
-        'description',
         'address',
         'phone',
+        'verified',
         'email',
     ];
 

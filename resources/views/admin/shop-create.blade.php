@@ -8,45 +8,81 @@
         <div class="card-body">
             <h4 class="card-title">Create Shop</h4>
 
-
             <a href="{{ route('shops.index') }}" class="btn btn-secondary font-weight-bold my-4">
                 <- Go to List </a>
                     <hr>
 
                     <form class="forms-sample">
+
                         <div class="form-group row">
-                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Email</label>
+                            <label for="exampleSelectGender" class="col-sm-3 col-form-label">Owner</label>
+
+                            <div class="col mt-2">
+                                <select class="form-control" id="exampleSelectGender" name="user_id">
+                                    <option selected disabled>Select Owner</option>
+                                    @foreach($users as $user)
+                                    <option value="{{ $user->id }}">{{ $user->name }} - ( {{$user->email}} )</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Shop Title</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="exampleInputUsername2"
-                                    placeholder="Username" />
+                                    placeholder="Enter shop title" name="name" />
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                            <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Slug</label>
                             <div class="col-sm-9">
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" />
+                                <input type="text" class="form-control" id="exampleInputEmail2" name="slug"
+                                    placeholder="Short motive about the shop" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="exampleInputAddress" class="col-sm-3 col-form-label">Address</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="exampleInputAddress" name="address"
+                                    placeholder="Physical Shop address" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="exampleInputMobile"
+                                <input type="text" class="form-control" name="phone" id="exampleInputMobile"
                                     placeholder="Mobile number" />
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
+                            <label for="exampleInputEmail" class="col-sm-3 col-form-label">Email</label>
                             <div class="col-sm-9">
-                                <input type="password" class="form-control" id="exampleInputPassword2"
-                                    placeholder="Password" />
+                                <input type="email" class="form-control" id="exampleInputEmail" name="email"
+                                    placeholder="Email for shop" />
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Re
-                                Password</label>
-                            <div class="col-sm-9">
-                                <input type="password" class="form-control" id="exampleInputConfirmPassword2"
-                                    placeholder="Password" />
+                            <label class="col-sm-3 col-form-label">Status</label>
+                            <div class="col-sm-4">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="membershipRadios"
+                                            id="membershipRadios1" value="" checked />
+                                        Normal
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="membershipRadios"
+                                            id="membershipRadios2" value="option2" />
+                                        Verified
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
