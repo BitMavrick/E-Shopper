@@ -80,4 +80,11 @@ class ShopController extends Controller
 
         return redirect()->route('shops.index');
     }
+
+    public function destroy($id)
+    {
+        $shop = Shop::find($id);
+        $shop->delete();
+        return redirect()->route('shops.index');
+    }
 }
