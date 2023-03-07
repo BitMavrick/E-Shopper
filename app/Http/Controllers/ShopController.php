@@ -24,8 +24,6 @@ class ShopController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->all());
-
         $request->validate([
             'user_id' => 'required',
             'name' => 'required',
@@ -47,5 +45,14 @@ class ShopController extends Controller
         $shop->save();
 
         return redirect()->route('shops.index');
+    }
+
+    public function edit($id)
+    {
+        $shop = Shop::find($id);
+        $users = User::all();
+        view()->share('users', $users);
+        view()->share('shop', $shop);
+        return view('admin.shop-edit');
     }
 }
