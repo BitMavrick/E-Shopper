@@ -17,15 +17,11 @@ class CreateShopsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->string('description');
             $table->string('address');
             $table->string('phone');
             $table->string('email');
-            $table->string('website')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('twitter')->nullable();
-            $table->string('instagram')->nullable();
-            $table->string('youtube')->nullable();
+            $table->boolean('verified')->default(false);
+
             $table->timestamps();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

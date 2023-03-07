@@ -19,11 +19,6 @@ class Shop extends Model
         'address',
         'phone',
         'email',
-        'website',
-        'facebook',
-        'twitter',
-        'instagram',
-        'youtube',
     ];
 
     public function product()

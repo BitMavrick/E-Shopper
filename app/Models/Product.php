@@ -12,8 +12,18 @@ class Product extends Model
     protected $table = 'products';
 
     protected $fillable = [
+        'image',
         'name',
+        'prev_price',
         'price',
+        'Short_description',
+        'variant',
+        'brand',
+        'quantity',
+        'description',
+        'specification',
+        'shop_id',
+        'category_id',
     ];
 
     public function shop()
