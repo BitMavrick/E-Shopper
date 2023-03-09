@@ -52,7 +52,7 @@ class ProductController extends Controller
 
             $image = $request->file('image');
             $image_resize = Image::make($image->getRealPath());
-            $image_resize->fit(1280, 720, function ($constraint) {
+            $image_resize->fit(480, 480, function ($constraint) {
                 $constraint->aspectRatio();
             });
 

@@ -35,7 +35,13 @@
                             <div class="col-sm-9">
                                 <input type="file" required class="form-control" id="image" name="image"
                                     placeholder="Insert image" />
+                                <small style="color: red;">The ideal ratio of the product will be square. The image will
+                                    be
+                                    crop
+                                    to maintain the exact ratio</small>
                             </div>
+
+
                         </div>
 
                         <div class="form-group row">
