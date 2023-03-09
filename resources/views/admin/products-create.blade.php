@@ -12,13 +12,14 @@
                 <- Go to List </a>
                     <hr>
 
-                    <form class="forms-sample" action="{{ route('shops.store') }}" method="post">
+                    <form class="forms-sample" action="{{ route('products.store') }}" method="post"
+                        enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="owner" class="col-sm-3 col-form-label">Owner</label>
+                            <label for="shop_id" class="col-sm-3 col-form-label">Select shop</label>
                             <div class="col mt-2">
-                                <select class="form-control" id="owner" required name="user_id">
+                                <select class="form-control" id="shop_id" required name="shop_id">
                                     <option selected disabled>Select shop</option>
                                     @foreach($shops as $shop)
                                     <option value="{{ $shop->id }}">{{ $shop->name }} - Owner:
@@ -48,7 +49,7 @@
                         <div class="form-group row">
                             <label for="owner" class="col-sm-3 col-form-label">Category</label>
                             <div class="col mt-2">
-                                <select class="form-control" id="owner" required name="user_id">
+                                <select class="form-control" id="owner" required name="category_id">
                                     <option selected disabled>Select product category</option>
                                     @foreach($categories as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }} - ({{ $category->slug }})
@@ -77,7 +78,7 @@
                         <div class="form-group row">
                             <label for="Quantity" class="col-sm-3 col-form-label">Quantity</label>
                             <div class="col-sm-9">
-                                <input type="number" required class="form-control" id="Quantity" name="Quantity"
+                                <input type="number" required class="form-control" id="Quantity" name="quantity"
                                     placeholder="Enter the product's quantity" />
                             </div>
                         </div>
@@ -111,7 +112,7 @@
                         <div class="form-group row">
                             <label for="description" class="col-sm-3 col-form-label">Description</label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" id="description" rows="6"
+                                <textarea class="form-control" name="description" id="description" rows="6"
                                     placeholder="Proper description of the product"></textarea>
                             </div>
                         </div>
@@ -119,7 +120,7 @@
                         <div class="form-group row">
                             <label for="specification" class="col-sm-3 col-form-label">Specification</label>
                             <div class="col-sm-9">
-                                <textarea class="form-control" id="specification" rows="7"
+                                <textarea class="form-control" name="specification" id="specification" rows="7"
                                     placeholder="Enter specification of the product"></textarea>
                             </div>
                         </div>
