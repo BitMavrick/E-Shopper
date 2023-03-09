@@ -10,6 +10,12 @@
                 Total Products: <code> {{ count($products) }} </code>
             </p>
 
+            <!-- Button trigger modal -->
+            <a class="btn btn-info font-weight-bold my-4" href="{{ route('products.create') }}">
+                + Create
+                New
+            </a>
+
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -30,10 +36,10 @@
                                 Shop
                             </th>
                             <th>
-                                Total Sale
+                                Total Items
                             </th>
                             <th>
-                                Status
+                                Total Sold
                             </th>
                             <th>
                                 Action
