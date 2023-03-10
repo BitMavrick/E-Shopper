@@ -75,4 +75,14 @@ class ProductController extends Controller
 
         return redirect()->route('products.index');
     }
+
+    public function edit()
+    {
+        $shops = Shop::all();
+        $categories = Category::all();
+
+        view()->share('shops', $shops);
+        view()->share('categories', $categories);
+        return view('admin.products-edit');
+    }
 }
