@@ -21,6 +21,7 @@ class Product extends Model
         'brand',
         'quantity',
         'description',
+        'Short_description',
         'specification',
         'shop_id',
         'category_id',
