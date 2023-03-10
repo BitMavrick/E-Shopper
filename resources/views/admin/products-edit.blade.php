@@ -17,7 +17,7 @@
 
                         <button class="btn btn-danger ml-4" type="submit"
                             onclick="return confirm('Are you sure you want to delete this product?')">Delete
-                            Shop</button>
+                            Product</button>
             </form>
 
             <hr>

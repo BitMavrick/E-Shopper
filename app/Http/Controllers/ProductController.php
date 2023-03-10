@@ -88,6 +88,10 @@ class ProductController extends Controller
         return view('admin.products-edit');
     }
 
+    public function update(Request $request, $id)
+    {
+    }
+
     public function destroy($id)
     {
         $product = Product::find($id);
