@@ -42,6 +42,9 @@
                 <div class="form-group row">
                     <label for="image" class="col-sm-3 col-form-label">Image</label>
                     <div class="col-sm-9">
+
+                        <img style="width: 300px;" class="mb-3" src="/storage/img/{{$product->image}}" alt="">
+
                         <input type="file" required class="form-control" id="image" name="image"
                             placeholder="Insert image" />
                         <small style="color: red;">The ideal ratio of the product will be square. The image will
@@ -140,9 +143,8 @@
                 </div>
 
                 <button type="submit" class="btn btn-info mr-2">
-                    Create
+                    Save changes
                 </button>
-                <button type="reset" class="btn btn-light">Discard all</button>
             </form>
         </div>
     </div>
