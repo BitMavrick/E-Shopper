@@ -76,13 +76,22 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $product = Product::find($id);
         $shops = Shop::all();
         $categories = Category::all();
 
+        view()->share('product', $product);
         view()->share('shops', $shops);
         view()->share('categories', $categories);
         return view('admin.products-edit');
+    }
+
+    public function destroy($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+        return redirect()->route('products.index');
     }
 }
