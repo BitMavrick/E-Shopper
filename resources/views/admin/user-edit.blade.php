@@ -9,7 +9,7 @@
             <h4 class="card-title">User Details</h4>
             <hr>
 
-            <form class="forms-sample" action="#" method="post">
+            <form class="forms-sample" action="{{ route('admin.user.update', $user->id) }}" method="post">
                 @csrf
                 @method('PATCH')
 
@@ -87,7 +87,9 @@
                 <button type="submit" class="btn btn-info mr-2">
                     Save changes
                 </button>
-
+                <button type="reset" class="btn btn-secondary mr-2">
+                    Discard
+                </button>
             </form>
         </div>
     </div>
