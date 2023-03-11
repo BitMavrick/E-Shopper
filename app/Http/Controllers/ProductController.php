@@ -29,8 +29,6 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->all());
-
         $request->validate([
             'name' => 'required',
             'image' => 'required | image | mimes:jpeg,png,jpg | max:5120',
@@ -95,7 +93,7 @@ class ProductController extends Controller
             'name' => 'required',
             'image' => 'image | mimes:jpeg,png,jpg | max:5120',
             'price' => 'required',
-            'Short_description' => 'required',
+            'short_description' => 'required',
             'variant' => 'required',
             'brand' => 'required',
             'quantity' => 'required',
@@ -110,6 +108,12 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         if ($request->hasFile('image')) {
+            // Unlink old image
+            $old_image = public_path('storage/img/' . $product->image);
+            if (file_exists($old_image)) {
+                unlink($old_image);
+            }
+
             $extension = $request->file('image')->getClientOriginalExtension();
             $filename = date('Y-m-d') . '_' . time() . '.' . $extension;
 
@@ -142,6 +146,13 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::find($id);
+
+        // Unlink old image
+        $old_image = public_path('storage/img/' . $product->image);
+        if (file_exists($old_image)) {
+            unlink($old_image);
+        }
+
         $product->delete();
         return redirect()->route('products.index');
     }

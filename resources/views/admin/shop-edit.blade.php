@@ -24,7 +24,8 @@
 
             <hr>
 
-            <form class="forms-sample" action="{{ route('shops.update', $shop->id) }}" method="post">
+            <form class="forms-sample" action="{{ route('shops.update', $shop->id) }}" method="post"
+                enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
                 <div class="form-group row">
