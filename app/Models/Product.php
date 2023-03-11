@@ -16,7 +16,7 @@ class Product extends Model
         'name',
         'prev_price',
         'price',
-        'Short_description',
+        'short_description',
         'variant',
         'brand',
         'quantity',
