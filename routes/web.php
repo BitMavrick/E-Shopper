@@ -27,6 +27,7 @@ Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users
 Route::get('/super/sellers', [AdminController::class, 'sellers'])->name('admin.sellers');
 Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.admins');
 Route::get('/super/user/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
+Route::delete('/super/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
 
 
 // category resource route

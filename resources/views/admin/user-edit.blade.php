@@ -7,124 +7,81 @@
 
         <div class="card-body">
             <h4 class="card-title">User Details</h4>
-
-
-
-            <form action="{{ route('shops.destroy', $shop->id) }}" method="post">
-                @csrf
-                @method('DELETE')
-
-                <a href="{{ route('shops.index') }}" class="btn btn-secondary font-weight-bold my-4">
-                    <- Go to List </a>
-
-                        <button class="btn btn-danger ml-4" type="submit"
-                            onclick="return confirm('Are you sure you want to delete this shop? All the product of this shop will be removed!')">Delete
-                            Shop</button>
-            </form>
-
             <hr>
 
-            <form class="forms-sample" action="{{ route('shops.update', $shop->id) }}" method="post">
+            <form class="forms-sample" action="#" method="post">
                 @csrf
                 @method('PATCH')
-                <div class="form-group row">
-                    <label for="exampleSelectGender" class="col-sm-3 col-form-label">Owner</label>
 
+                <div class="form-group row">
+                    <label for="name" class="col-sm-3 col-form-label">Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" required class="form-control" id="name" placeholder="Enter name" name="name"
+                            value="{{ $user->name }}" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" required class="form-control" id="email" placeholder="Enter email"
+                            name="email" value="{{ $user->email }}" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="type" class="col-sm-3 col-form-label">Type</label>
                     <div class="col mt-2">
-                        <select class="form-control" id="exampleSelectGender" name="user_id">
-                            <option selected value="{{ $shop->user->id }}" style="color: red;">
-                                {{ $shop->user->name }} - (
-                                {{ $shop->user->email}} )
-                            </option>
-                            @foreach($users as $user)
-                            @if($user->id != $shop->user->id)
-                            <option value="{{ $user->id }}">{{ $user->name }} - ( {{$user->email}} )</option>
+                        <select class="form-control" id="type" required name="type">
+
+                            @if($user->type == 'admin')
+                            <option style="color: red;" selected value="{{$user->type}}">Admin</option>
+                            <option value="user">User</option>
+                            <option value="seller">Seller</option>
+                            @elseif($user->type == 'seller')
+                            <option style="color: red;" selected value="{{$user->type}}">Seller</option>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                            @elseif($user->type == 'user')
+                            <option style="color: red;" selected value="{{$user->type}}">User</option>
+                            <option value="seller">Seller</option>
+                            <option value="admin">Admin</option>
                             @endif
-                            @endforeach
+
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Shop Title</label>
-                    <div class="col-sm-9">
-                        <input type="text" required value="{{ $shop->name }}" class="form-control"
-                            id="exampleInputUsername2" placeholder="Enter shop title" name="name" />
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Slug</label>
-                    <div class="col-sm-9">
-                        <input type="text" required value="{{ $shop->slug }}" class="form-control"
-                            id="exampleInputEmail2" name="slug" placeholder="Short motive about the shop" />
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="exampleInputAddress" class="col-sm-3 col-form-label">Address</label>
-                    <div class="col-sm-9">
-                        <input type="text" required value="{{ $shop->address }}" class="form-control"
-                            id="exampleInputAddress" name="address" placeholder="Physical Shop address" />
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
-                    <div class="col-sm-9">
-                        <input type="text" required value="{{ $shop->phone }}" class="form-control" name="phone"
-                            id="exampleInputMobile" placeholder="Mobile number" />
-                    </div>
-                </div>
+                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                    <div class="col mt-2">
+                        <select class="form-control" id="status" required name="status">
 
-                <div class="form-group row">
-                    <label for="exampleInputEmail" class="col-sm-3 col-form-label">Email</label>
-                    <div class="col-sm-9">
-                        <input type="email" required value="{{ $shop->email }}" class="form-control"
-                            id="exampleInputEmail" name="email" placeholder="Email for shop" />
-                    </div>
-                </div>
+                            @if($user->status == 'nor')
+                            <option style="color: red;" selected value="{{$user->status}}">Normal</option>
+                            <option value="ver">Verified</option>
+                            <option value="ban">Banned</option>
+                            <option value="pen">Pending seller request</option>
+                            @elseif($user->status == 'ver')
+                            <option style="color: red;" selected value="{{$user->status}}">Verified</option>
+                            <option value="nor">Normal</option>
+                            <option value="ban">Banned</option>
+                            <option value="pen">Pending seller request</option>
+                            @elseif($user->status == 'pen')
+                            <option style="color: red;" selected value="{{$user->status}}">Pending seller request
+                            </option>
+                            <option value="nor">Normal</option>
+                            <option value="ver">Verified</option>
+                            <option value="ban">Banned</option>
+                            @elseif($user->status == 'ban')
+                            <option style="color: red;" selected value="{{$user->status}}">Banned</option>
+                            <option value="nor">Normal</option>
+                            <option value="ver">Verified</option>
+                            <option value="pen">Pending seller request</option>
+                            @endif
 
-                <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Status</label>
-                    @if($shop->verified == 1)
-                    <div class="col-sm-4">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="verified" id="membershipRadios1"
-                                    value="0" />
-                                Normal
-                            </label>
-                        </div>
+                        </select>
                     </div>
-                    <div class="col-sm-5">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="verified" id="membershipRadios2"
-                                    value="1" checked />
-                                Verified
-                            </label>
-                        </div>
-                    </div>
-                    @else
-
-                    <div class="col-sm-4">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="verified" id="membershipRadios1"
-                                    value="0" checked />
-                                Normal
-                            </label>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="verified" id="membershipRadios2"
-                                    value="1" />
-                                Verified
-                            </label>
-                        </div>
-                    </div>
-
-                    @endif
                 </div>
 
                 <button type="submit" class="btn btn-info mr-2">
