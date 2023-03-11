@@ -104,7 +104,7 @@
                             <a href="#" class="nav-link dropdown-toggle"
                                 data-toggle="dropdown">{{ Auth::user()->name}}</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="cart.html" class="dropdown-item">Manage Account</a>
+                                <a href="{{ route('manage-account') }}" class="dropdown-item">Manage Account</a>
                                 <a href="cart.html" class="dropdown-item">Orders</a>
                                 <a href="cart.html" class="dropdown-item">Wishlist</a>
                                 <a href="cart.html" class="dropdown-item">Reviews</a>

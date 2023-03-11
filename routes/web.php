@@ -16,6 +16,9 @@ Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
+// User routes
+Route::get('/manage-account', [HomeController::class, 'manage_account'])->name('manage-account');
+
 // Admin routes
 Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
 Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');

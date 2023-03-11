@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('user.contact');
     }
+
+    public function manage_account()
+    {
+        return view('user.manage-account');
+    }
 }
