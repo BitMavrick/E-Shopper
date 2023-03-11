@@ -29,17 +29,18 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        //dd($request->all());
+
         $request->validate([
             'name' => 'required',
             'image' => 'required | image | mimes:jpeg,png,jpg | max:5120',
             'price' => 'required',
-            'Short_description' => 'required',
+            'short_description' => 'required',
             'variant' => 'required',
             'brand' => 'required',
             'quantity' => 'required',
             'description' => 'required',
             'specification' => 'required',
-            'short_description' => 'required',
             'shop_id' => 'required',
             'category_id' => 'required',
         ]);
