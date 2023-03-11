@@ -39,7 +39,7 @@ class ProductController extends Controller
             'quantity' => 'required',
             'description' => 'required',
             'specification' => 'required',
-
+            'short_description' => 'required',
             'shop_id' => 'required',
             'category_id' => 'required',
         ]);
@@ -63,7 +63,7 @@ class ProductController extends Controller
         $product->name = $request->name;
         $product->prev_price = $request->prev_price;
         $product->price = $request->price;
-        $product->Short_description = $request->Short_description;
+        $product->short_description = $request->short_description;
         $product->variant = $request->variant;
         $product->brand = $request->brand;
         $product->quantity = $request->quantity;
@@ -90,6 +90,52 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required',
+            'image' => 'image | mimes:jpeg,png,jpg | max:5120',
+            'price' => 'required',
+            'Short_description' => 'required',
+            'variant' => 'required',
+            'brand' => 'required',
+            'quantity' => 'required',
+            'description' => 'required',
+            'specification' => 'required',
+            'short_description' => 'required',
+
+            'shop_id' => 'required',
+            'category_id' => 'required',
+        ]);
+
+        $product = Product::find($id);
+
+        if ($request->hasFile('image')) {
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $filename = date('Y-m-d') . '_' . time() . '.' . $extension;
+
+            $image = $request->file('image');
+            $image_resize = Image::make($image->getRealPath());
+            $image_resize->fit(480, 480, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+
+            $image_resize->save(public_path('storage/img/' . $filename));
+            $product->image = $filename;
+        }
+
+        $product->name = $request->name;
+        $product->prev_price = $request->prev_price;
+        $product->price = $request->price;
+        $product->short_description = $request->short_description;
+        $product->variant = $request->variant;
+        $product->brand = $request->brand;
+        $product->quantity = $request->quantity;
+        $product->description = $request->description;
+        $product->specification = $request->specification;
+        $product->shop_id = $request->shop_id;
+        $product->category_id = $request->category_id;
+        $product->save();
+
+        return redirect()->back();
     }
 
     public function destroy($id)

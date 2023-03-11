@@ -107,10 +107,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="Short_description" class="col-sm-3 col-form-label">Short Description</label>
+                            <label for="short_description" class="col-sm-3 col-form-label">Short Description</label>
                             <div class="col-sm-9">
-                                <input type="text" required class="form-control" id="Short_description"
-                                    name="Short_description"
+                                <input type="text" required class="form-control" id="short_description"
+                                    name="short_description"
                                     placeholder="Write a short description about the product" />
                             </div>
                         </div>

@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->decimal('prev_price')->nullable();
             $table->decimal('price');
-            $table->string('Short_description');
+            $table->string('short_description');
             $table->string('variant');
             $table->string('brand');
             $table->decimal('quantity');
