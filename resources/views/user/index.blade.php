@@ -4,7 +4,6 @@
         {{ $title ?? 'Home | E-Shopper' }}
     </x-slot>
 
-
     <x-user.partials.register />
 
     <div class="container-fluid">
@@ -40,7 +39,7 @@
         </div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
+                <a href="{{ route('home') }}" class="text-decoration-none">
                     <h1 class="m-0 display-5 font-weight-semi-bold">
                         <span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper
                     </h1>
@@ -101,10 +100,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
                             <a href="detail.html" class="nav-item nav-link">Explore</a>
                             <a href="shop.html" class="nav-item nav-link active">Your Feed</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                            <a href="{{ route('contact') }}" class="nav-item nav-link">Contact Us</a>
                         </div>
                         <div class="navbar-nav ml-auto py-0">
                             @if(Auth::user())
@@ -175,7 +174,6 @@
             </div>
         </div>
     </div>
-
 
     <x-user.partials.featured />
     <x-user.partials.categories />
