@@ -42,7 +42,7 @@
                                 <img src="{{ $user->avatar }}" alt="users image" />
                             </td>
                             <td>
-                                <a href="#">{{ $user->name }}</a>
+                                <a href="{{ route('admin.user.edit', $user->id) }}">{{ $user->name }}</a>
                             </td>
                             <td>
                                 {{ $user->email }}

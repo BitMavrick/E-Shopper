@@ -7,6 +7,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
+
 
 // Home routes
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -24,15 +26,17 @@ Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
 Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');
 Route::get('/super/sellers', [AdminController::class, 'sellers'])->name('admin.sellers');
 Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.admins');
+Route::get('/super/user/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
+
 
 // category resource route
-Route::resource('categories', CategoryController::class);
+Route::resource('/super/categories', CategoryController::class);
 
 // shop resource route
-Route::resource('shops', ShopController::class);
+Route::resource('/super/shops', ShopController::class);
 
 // product resource route
-Route::resource('products', ProductController::class);
+Route::resource('/super/products', ProductController::class);
 
 
 
