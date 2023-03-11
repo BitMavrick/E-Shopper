@@ -27,6 +27,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         View::composer([
             'components.user.partials.topnav',
+            'user.index',
         ], DefaultComposer::class);
     }
 }
