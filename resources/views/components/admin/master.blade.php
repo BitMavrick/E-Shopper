@@ -55,37 +55,7 @@
     </div>
     <!-- container-scroller -->
 
-    <script>
-    ClassicEditor
-        .create(document.querySelector('.editor1'))
-        .catch(error => {
-            console.error(error);
-        });
-    </script>
 
-    <script>
-    ClassicEditor
-        .create(document.querySelector('.editor2'))
-        .catch(error => {
-            console.error(error);
-        });
-    </script>
-
-    <script>
-    ClassicEditor
-        .create(document.querySelector('.editor3'))
-        .catch(error => {
-            console.error(error);
-        });
-    </script>
-
-    <script>
-    ClassicEditor
-        .create(document.querySelector('.editor4'))
-        .catch(error => {
-            console.error(error);
-        });
-    </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
