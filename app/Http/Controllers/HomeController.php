@@ -16,7 +16,11 @@ class HomeController extends Controller
     public function shop($id)
     {
         $shop = Shop::find($id);
-        return view('user.shop', compact('shop'));
+        $product = Product::where('shop_id', $id)->orderBy('created_at', 'desc')->paginate(9);
+        return view('user.shop', compact([
+            'shop',
+            'product'
+        ]));
     }
 
     public function product($id)
