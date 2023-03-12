@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,9 +17,10 @@ class HomeController extends Controller
         return view('user.shop');
     }
 
-    public function product()
+    public function product($id)
     {
-        return view('user.product');
+        $product = Product::find($id);
+        return view('user.product', compact('product'));
     }
 
     public function cart()

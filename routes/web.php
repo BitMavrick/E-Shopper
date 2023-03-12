@@ -13,7 +13,7 @@ use App\Http\Controllers\UserController;
 // Home routes
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
-Route::get('/product', [HomeController::class, 'product'])->name('product');
+Route::get('/product/{id}', [HomeController::class, 'product'])->name('product');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
