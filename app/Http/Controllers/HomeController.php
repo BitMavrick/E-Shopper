@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Shop;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,9 +13,10 @@ class HomeController extends Controller
         return view('user.index');
     }
 
-    public function shop()
+    public function shop($id)
     {
-        return view('user.shop');
+        $shop = Shop::find($id);
+        return view('user.shop', compact('shop'));
     }
 
     public function product($id)

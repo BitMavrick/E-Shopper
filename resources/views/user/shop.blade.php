@@ -6,7 +6,18 @@
 
     <x-user.partials.register />
     <x-user.partials.topnav />
-    <x-user.partials.header />
+
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">
+                {{ $shop->name }}
+            </h1>
+            <p>{{ $shop->slug }}</p>
+            <a href="tel:{{ $shop->phone }}">{{ $shop->phone }}</a>
+            <a href="mailto:{{ $shop->email }}">{{ $shop->email }}</a>
+            <p>{{ $shop->address }}</p>
+        </div>
+    </div>
 
     <!-- Shop Start -->
     <div class="container-fluid pt-5">
