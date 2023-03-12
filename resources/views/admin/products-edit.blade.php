@@ -132,7 +132,7 @@
                 <div class="form-group row">
                     <label for="description" class="col-sm-3 col-form-label">Description</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control" required name="description" id="description" rows="6"
+                        <textarea class="form-control editor1" required name="description" id="description" rows="6"
                             placeholder="Proper description of the product">{{ $product->description }}</textarea>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                 <div class="form-group row">
                     <label for="specification" class="col-sm-3 col-form-label">Specification</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control" required name="specification" id="specification" rows="7"
+                        <textarea class="form-control editor2" required name="specification" id="specification" rows="7"
                             placeholder="Enter specification of the product">{{ $product->specification }}</textarea>
                     </div>
                 </div>
@@ -151,5 +151,21 @@
             </form>
         </div>
     </div>
+
+    <script>
+    ClassicEditor
+        .create(document.querySelector('.editor1'))
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
+
+    <script>
+    ClassicEditor
+        .create(document.querySelector('.editor2'))
+        .catch(error => {
+            console.error(error);
+        });
+    </script>
 
 </x-admin.master>

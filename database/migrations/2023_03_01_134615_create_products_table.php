@@ -19,12 +19,12 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->decimal('prev_price')->nullable();
             $table->decimal('price');
-            $table->string('short_description');
+            $table->longText('short_description');
             $table->string('variant');
             $table->string('brand');
             $table->decimal('quantity');
-            $table->string('description');
-            $table->string('specification');
+            $table->longText('description');
+            $table->longText('specification');
             $table->timestamps();
 
             $table->unsignedBigInteger('shop_id');
