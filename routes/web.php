@@ -22,14 +22,15 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/manage-account', [HomeController::class, 'manage_account'])->name('manage-account');
 
 // Admin routes
-Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
-Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');
-Route::get('/super/sellers', [AdminController::class, 'sellers'])->name('admin.sellers');
-Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.admins');
-Route::get('/super/user/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
-Route::patch('/super/user/{id}', [UserController::class, 'update'])->name('admin.user.update');
-Route::delete('/super/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
-
+Route::middleware('admin')->group(function () {
+    Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
+    Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::get('/super/sellers', [AdminController::class, 'sellers'])->name('admin.sellers');
+    Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.admins');
+    Route::get('/super/user/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
+    Route::patch('/super/user/{id}', [UserController::class, 'update'])->name('admin.user.update');
+    Route::delete('/super/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
+});
 
 // category resource route
 Route::resource('/super/categories', CategoryController::class);
