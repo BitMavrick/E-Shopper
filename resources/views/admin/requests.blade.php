@@ -5,9 +5,9 @@
 
     <div class="content-wrapper">
         <div class="card-body">
-            <h4 class="card-title">Admins List</h4>
+            <h4 class="card-title">Pending Seller Requests</h4>
             <p class="card-description">
-                Total admins: <code> {{ count($users) }} </code>
+                Total requests: <code> {{ count($users) }} </code>
             </p>
             <div class="table-responsive">
                 <table class="table table-hover">
