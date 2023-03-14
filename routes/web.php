@@ -41,5 +41,10 @@ Route::resource('/super/shops', ShopController::class);
 Route::resource('/super/products', ProductController::class);
 
 
+// Fallback routes
+Route::get('/unauthorized', [HomeController::class, 'unauthorized'])->name('unauthorized');
+Route::fallback([HomeController::class, 'fallback'])->name('fallback');
+
+
 
 require __DIR__ . '/auth.php';

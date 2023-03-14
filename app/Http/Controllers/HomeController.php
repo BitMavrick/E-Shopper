@@ -48,4 +48,14 @@ class HomeController extends Controller
     {
         return view('user.manage-account');
     }
+
+    public function unauthorized()
+    {
+        return view('user.unauthorized');
+    }
+
+    public function fallback()
+    {
+        return view('user.404');
+    }
 }
