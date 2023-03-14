@@ -10,7 +10,7 @@
                 Total Shops: <code> {{ count($shops) }} </code>
             </p>
 
-            <a href="{{ route('shops.create') }}" class="btn btn-info font-weight-bold my-4">
+            <a href="{{ route('seller.shop-create') }}" class="btn btn-info font-weight-bold my-4">
                 + Create
                 New
             </a>

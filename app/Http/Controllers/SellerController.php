@@ -34,4 +34,9 @@ class SellerController extends Controller
         view()->share('shops', $shops);
         return view('seller.shops');
     }
+
+    public function shop_create()
+    {
+        return view('seller.shop-create');
+    }
 }

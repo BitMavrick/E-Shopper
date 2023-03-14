@@ -35,15 +35,18 @@ Route::middleware('admin')->group(function () {
     Route::get('/super/user/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
     Route::patch('/super/user/{id}', [UserController::class, 'update'])->name('admin.user.update');
     Route::delete('/super/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
+
+    // category resource route
+    Route::resource('/super/categories', CategoryController::class);
 });
 
 // Seller routes only
 Route::get('/seller', [SellerController::class, 'index'])->name('seller.home');
 Route::get('/seller/shop', [SellerController::class, 'shop'])->name('seller.shop');
+Route::get('/seller/shop-create', [SellerController::class, 'shop_create'])->name('seller.shop-create');
 Route::get('/seller/product', [SellerController::class, 'product'])->name('seller.product');
 
-// category resource route
-Route::resource('/super/categories', CategoryController::class);
+
 
 // shop resource route
 Route::resource('/super/shops', ShopController::class);
@@ -55,7 +58,5 @@ Route::resource('/super/products', ProductController::class);
 // Fallback routes
 Route::get('/unauthorized', [HomeController::class, 'unauthorized'])->name('unauthorized');
 Route::fallback([HomeController::class, 'fallback'])->name('fallback');
-
-
 
 require __DIR__ . '/auth.php';

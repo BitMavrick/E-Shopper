@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Shop;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
@@ -44,7 +45,11 @@ class ShopController extends Controller
         $shop->email = $request->email;
         $shop->save();
 
-        return redirect()->route('shops.index');
+        if (Auth::user()->type == 'admin') {
+            return redirect()->route('shops.index');
+        } else if (Auth::user()->type == 'seller') {
+            return redirect()->route('seller.shop');
+        }
     }
 
     public function edit($id)
