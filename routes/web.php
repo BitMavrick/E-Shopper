@@ -21,7 +21,10 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 // User routes
 Route::get('/manage-account', [HomeController::class, 'manage_account'])->name('manage-account');
 
-// Admin routes
+// User Authenticated routed only
+Route::post('/seller-request', [UserController::class, 'seller_request'])->name('seller-request');
+
+// Admin routes only
 Route::middleware('admin')->group(function () {
     Route::get('/super', [AdminController::class, 'index'])->name('admin.home');
     Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');

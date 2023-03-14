@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Redis;
 
 class UserController extends Controller
 {
@@ -29,5 +30,24 @@ class UserController extends Controller
         else if ($request->type == 'user') {
             return redirect()->route('admin.users');
         }
+    }
+
+    public function seller_request(Request $request)
+    {
+        if (auth()->user()->id == $request->id) {
+            $user = User::find($request->id);
+
+            $user->status = 'pen';
+            $user->save();
+
+            // Success message
+            session()->flash('message', 'Success! The request is successfully accepted and its pending for approval! Please wait until its approved. Thank you.');
+            session()->flash('alert-type', 'alert-success');
+            return redirect()->back();
+        }
+
+        session()->flash('message', 'Sorry! Something went wrong.');
+        session()->flash('alert-type', 'alert-danger');
+        return redirect()->back();
     }
 }

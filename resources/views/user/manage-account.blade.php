@@ -31,7 +31,13 @@
                                     <td> <button disabled class="btn btn-primary">You already have seller
                                             access</button> </td>
                                     @elseif(auth::user()->status == 'nor')
-                                    <td> <button class="btn btn-primary">Apply</button> </td>
+                                    <td>
+                                        <form action="{{ route('seller-request')}}" method="post">
+                                            @csrf
+                                            <input type="text" hidden name="id" value="{{ auth::user()->id }}">
+                                            <button class="btn btn-primary">Apply</button>
+                                        </form>
+                                    </td>
                                     @endif
                                 </tr>
                             </tbody>
