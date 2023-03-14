@@ -28,7 +28,7 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{ route('products.index') }}"> Products </a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('shops.index') }}"> Shops </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('seller.shop') }}"> Shops </a></li>
                 </ul>
             </div>
         </li>

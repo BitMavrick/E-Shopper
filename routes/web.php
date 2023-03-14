@@ -39,6 +39,7 @@ Route::middleware('admin')->group(function () {
 
 // Seller routes only
 Route::get('/seller', [SellerController::class, 'index'])->name('seller.home');
+Route::get('/seller/shop', [SellerController::class, 'shop'])->name('seller.shop');
 
 
 // category resource route
