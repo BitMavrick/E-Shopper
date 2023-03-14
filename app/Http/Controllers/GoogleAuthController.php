@@ -37,11 +37,16 @@ class GoogleAuthController extends Controller
                 ]);
 
                 Auth::login($new_user);
+                // Success message
+                session()->flash('message', 'Welcome ! ' . $new_user->name);
+                session()->flash('alert-type', 'alert-success');
 
                 // This will redirect the user where I started authentication
                 return redirect()->intended(RouteServiceProvider::HOME);
             } else {
                 Auth::login($user);
+                session()->flash('message', 'Welcome back! ' . $user->name);
+                session()->flash('alert-type', 'alert-success');
 
                 // This will redirect the user where I started authentication
                 return redirect()->intended(RouteServiceProvider::HOME);
