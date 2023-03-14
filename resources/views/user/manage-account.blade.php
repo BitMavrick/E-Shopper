@@ -24,12 +24,15 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Become a verfied user</td>
-                                    <td> <button class="btn btn-primary">Apply</button> </td>
-                                </tr>
-                                <tr>
                                     <td>Become a seller</td>
+                                    @if(auth::user()->status == 'pen')
+                                    <td> <button disabled class="btn btn-primary">Applied</button> </td>
+                                    @elseif(auth::user()->status == 'ver')
+                                    <td> <button disabled class="btn btn-primary">You already have seller
+                                            access</button> </td>
+                                    @elseif(auth::user()->status == 'nor')
                                     <td> <button class="btn btn-primary">Apply</button> </td>
+                                    @endif
                                 </tr>
                             </tbody>
                         </table>
