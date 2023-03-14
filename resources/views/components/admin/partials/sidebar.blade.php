@@ -7,7 +7,7 @@
             {{ Auth::user()->name}}
         </div>
         <div class="user-designation">
-            Admin
+            Admin Panel
         </div>
     </div>
     <ul class="nav">
