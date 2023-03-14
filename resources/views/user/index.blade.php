@@ -176,6 +176,7 @@
     </div>
 
     <x-user.partials.featured />
+    
     <x-user.partials.categories />
     <x-user.partials.offer />
     <x-user.partials.trend />
