@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SellerController;
 
 
 // Home routes
@@ -35,6 +36,10 @@ Route::middleware('admin')->group(function () {
     Route::patch('/super/user/{id}', [UserController::class, 'update'])->name('admin.user.update');
     Route::delete('/super/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');
 });
+
+// Seller routes only
+Route::get('/seller', [SellerController::class, 'index'])->name('seller.home');
+
 
 // category resource route
 Route::resource('/super/categories', CategoryController::class);
