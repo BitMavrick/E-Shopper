@@ -114,6 +114,9 @@
                                 data-toggle="dropdown">{{ Auth::user()->name}}</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="{{ route('manage-account') }}" class="dropdown-item">Manage Account</a>
+                                @if(auth::user()->type == 'seller')
+                                <a href="#" class="dropdown-item">Seller Dashboard</a>
+                                @endif
                                 <a href="cart.html" class="dropdown-item">Orders</a>
                                 <a href="cart.html" class="dropdown-item">Wishlist</a>
                                 <a href="cart.html" class="dropdown-item">Reviews</a>
