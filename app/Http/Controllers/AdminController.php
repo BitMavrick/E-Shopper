@@ -35,4 +35,18 @@ class AdminController extends Controller
         view()->share('users', $users);
         return view('admin.admins');
     }
+
+    public function requests()
+    {
+        /*
+        pen = Pending for become seller
+        per = Pending for become verified
+        bot = Pending for become both seller and verified
+        */
+
+        $users = User::where('status', 'pen')->where('status', 'per')->where('status', 'bot')->get();
+
+        view()->share('users', $users);
+        return view('admin.requests');
+    }
 }
