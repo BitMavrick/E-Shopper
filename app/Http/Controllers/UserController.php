@@ -40,7 +40,6 @@ class UserController extends Controller
             $user->status = 'pen';
             $user->save();
 
-            // Success message
             session()->flash('message', 'Success! The request is successfully accepted and its pending for approval! Please wait until its approved. Thank you.');
             session()->flash('alert-type', 'alert-success');
             return redirect()->back();

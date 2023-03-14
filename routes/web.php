@@ -30,6 +30,7 @@ Route::middleware('admin')->group(function () {
     Route::get('/super/users', [AdminController::class, 'users'])->name('admin.users');
     Route::get('/super/sellers', [AdminController::class, 'sellers'])->name('admin.sellers');
     Route::get('/super/admins', [AdminController::class, 'admins'])->name('admin.admins');
+    Route::get('/super/requests', [AdminController::class, 'requests'])->name('admin.requests');
     Route::get('/super/user/{id}', [UserController::class, 'edit'])->name('admin.user.edit');
     Route::patch('/super/user/{id}', [UserController::class, 'update'])->name('admin.user.update');
     Route::delete('/super/user/{id}', [UserController::class, 'destroy'])->name('admin.user.destroy');

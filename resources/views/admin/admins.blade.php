@@ -54,6 +54,8 @@
                                 <label class="badge badge-success">Verified</label>
                                 @elseif($user->status == 'ban')
                                 <label class="badge badge-danger">Banned</label>
+                                @elseif($user->status == 'pen')
+                                <label class="badge badge-warning">pending req.</label>
                                 @endif
                             </td>
                             <td>
