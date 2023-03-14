@@ -29,6 +29,7 @@
                 </a>
             </div>
         </div>
+
     </div>
     <div class="row align-items-center py-3 px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
@@ -60,6 +61,14 @@
             </a>
         </div>
     </div>
+
+    @if(session('message'))
+    <div class="alert {{session('alert-type')}} alert-dismissible fade show mx-5" role="alert">
+        {{ session('message')  }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+
 </div>
 <!-- Topbar End -->
 

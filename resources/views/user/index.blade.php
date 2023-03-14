@@ -68,6 +68,12 @@
                 </a>
             </div>
         </div>
+        @if(session('message'))
+        <div class="alert {{session('alert-type')}} alert-dismissible fade show mx-5" role="alert">
+            {{ session('message')  }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
     </div>
 
     <div class="container-fluid mb-5">
@@ -176,7 +182,7 @@
     </div>
 
     <x-user.partials.featured />
-    
+
     <x-user.partials.categories />
     <x-user.partials.offer />
     <x-user.partials.trend />

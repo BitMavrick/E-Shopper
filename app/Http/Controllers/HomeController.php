@@ -10,6 +10,9 @@ class HomeController extends Controller
 {
     public function home()
     {
+        // Success message
+        session()->flash('message', 'Success! This is the home page');
+        session()->flash('alert-type', 'alert-success');
         return view('user.index');
     }
 
@@ -41,6 +44,11 @@ class HomeController extends Controller
 
     public function contact()
     {
+
+        // Success message
+        session()->flash('message', 'Success! This is the contact page');
+        session()->flash('alert-type', 'alert-success');
+
         return view('user.contact');
     }
 
