@@ -26,7 +26,7 @@
             </a>
             <div class="collapse" id="products">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ route('products.index') }}"> Products </a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('seller.product') }}"> Products </a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('seller.shop') }}"> Shops </a></li>
                 </ul>
