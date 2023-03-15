@@ -46,6 +46,7 @@ Route::get('/seller/shop', [SellerController::class, 'shop'])->name('seller.shop
 Route::get('/seller/shop-create', [SellerController::class, 'shop_create'])->name('seller.shop-create');
 Route::get('/seller/shop-edit/{id}', [SellerController::class, 'shop_edit'])->name('seller.shop-edit');
 Route::get('/seller/product', [SellerController::class, 'product'])->name('seller.product');
+Route::get('/seller/product-create', [SellerController::class, 'product_create'])->name('seller.product-create');
 
 
 

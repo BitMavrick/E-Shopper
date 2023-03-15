@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Shop;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -72,7 +73,13 @@ class ProductController extends Controller
         $product->category_id = $request->category_id;
         $product->save();
 
-        return redirect()->route('products.index');
+
+
+        if (Auth::user()->type == 'admin') {
+            return redirect()->route('products.index');
+        } else if (Auth::user()->type == 'seller') {
+            return redirect()->route('seller.product');
+        }
     }
 
     public function edit($id)

@@ -11,7 +11,7 @@
             </p>
 
             <!-- Button trigger modal -->
-            <a class="btn btn-info font-weight-bold my-4" href="{{ route('products.create') }}">
+            <a class="btn btn-info font-weight-bold my-4" href="{{ route('seller.product-create') }}">
                 + Create
                 New
             </a>

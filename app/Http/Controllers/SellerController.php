@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Shop;
 use App\Models\Product;
+use App\Models\Category;
 
 class SellerController extends Controller
 {
@@ -25,6 +26,17 @@ class SellerController extends Controller
 
         view()->share('products', $products);
         return view('seller.products');
+    }
+
+    public function product_create()
+    {
+        $user_id = auth()->user()->id;
+        $shops = Shop::where('user_id', $user_id)->get();
+        $categories = Category::all();
+
+        view()->share('shops', $shops);
+        view()->share('categories', $categories);
+        return view('seller.product-create');
     }
 
     public function shop()
