@@ -1,4 +1,4 @@
-<x-admin.master>
+<x-seller.master>
     <x-slot name="title">
         {{ $title ?? 'Shops | E-Shopper' }}
     </x-slot>
@@ -14,7 +14,7 @@
                 @csrf
                 @method('DELETE')
 
-                <a href="{{ route('shops.index') }}" class="btn btn-secondary font-weight-bold my-4">
+                <a href="{{ route('seller.shop') }}" class="btn btn-secondary font-weight-bold my-4">
                     <- Go to List </a>
 
                         <button class="btn btn-danger ml-4" type="submit"
@@ -78,4 +78,4 @@
         </div>
     </div>
 
-</x-admin.master>
+</x-seller.master>
