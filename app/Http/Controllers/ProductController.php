@@ -73,8 +73,6 @@ class ProductController extends Controller
         $product->category_id = $request->category_id;
         $product->save();
 
-
-
         if (Auth::user()->type == 'admin') {
             return redirect()->route('products.index');
         } else if (Auth::user()->type == 'seller') {
@@ -161,6 +159,11 @@ class ProductController extends Controller
         }
 
         $product->delete();
-        return redirect()->route('products.index');
+
+        if (Auth::user()->type == 'admin') {
+            return redirect()->route('products.index');
+        } else if (Auth::user()->type == 'seller') {
+            return redirect()->route('seller.product');
+        }
     }
 }

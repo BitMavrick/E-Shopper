@@ -74,7 +74,8 @@
                                 <label class="badge badge-success">Active</label>
                             </td>
                             <td>
-                                <a class="btn btn-info" href="{{ route('products.edit', $product->id) }}">See more</a>
+                                <a class="btn btn-info" href="{{ route('seller.product-edit', $product->id) }}">See
+                                    more</a>
                             </td>
                         </tr>
                         @endforeach

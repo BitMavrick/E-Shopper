@@ -12,7 +12,7 @@
                 @csrf
                 @method('DELETE')
 
-                <a href="{{ route('products.index') }}" class="btn btn-secondary font-weight-bold my-4">
+                <a href="{{ route('seller.product') }}" class="btn btn-secondary font-weight-bold my-4">
                     <- Go to List </a>
 
                         <button class="btn btn-danger ml-4" type="submit" onclick="return confirm('Are you sure you want to delete this product?')">Delete

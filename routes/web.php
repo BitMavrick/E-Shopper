@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CategoryController;
@@ -47,7 +46,7 @@ Route::get('/seller/shop-create', [SellerController::class, 'shop_create'])->nam
 Route::get('/seller/shop-edit/{id}', [SellerController::class, 'shop_edit'])->name('seller.shop-edit');
 Route::get('/seller/product', [SellerController::class, 'product'])->name('seller.product');
 Route::get('/seller/product-create', [SellerController::class, 'product_create'])->name('seller.product-create');
-
+Route::get('/seller/product-edit/{id}', [SellerController::class, 'product_edit'])->name('seller.product-edit');
 
 
 // shop resource route

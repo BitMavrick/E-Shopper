@@ -39,6 +39,20 @@ class SellerController extends Controller
         return view('seller.product-create');
     }
 
+    public function product_edit($id)
+    {
+        $product = Product::find($id);
+        $user_id = auth()->user()->id;
+        $shops = Shop::where('user_id', $user_id)->get();
+        $categories = Category::all();
+
+        view()->share('product', $product);
+        view()->share('shops', $shops);
+        view()->share('categories', $categories);
+
+        return view('seller.product-edit');
+    }
+
     public function shop()
     {
         $shops = Shop::where('user_id', auth()->user()->id)->get();
