@@ -39,4 +39,16 @@ class SellerController extends Controller
     {
         return view('seller.shop-create');
     }
+
+    public function shop_edit($id)
+    {
+        $shop = Shop::find($id);
+
+        if ($shop->user_id == auth()->user()->id) {
+            view()->share('shop', $shop);
+            return view('seller.shop-edit');
+        }
+
+        return redirect()->route('unauthorized');
+    }
 }

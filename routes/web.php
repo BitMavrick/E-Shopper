@@ -44,6 +44,7 @@ Route::middleware('admin')->group(function () {
 Route::get('/seller', [SellerController::class, 'index'])->name('seller.home');
 Route::get('/seller/shop', [SellerController::class, 'shop'])->name('seller.shop');
 Route::get('/seller/shop-create', [SellerController::class, 'shop_create'])->name('seller.shop-create');
+Route::get('/seller/shop-edit/{id}', [SellerController::class, 'shop_edit'])->name('seller.shop-edit');
 Route::get('/seller/product', [SellerController::class, 'product'])->name('seller.product');
 
 

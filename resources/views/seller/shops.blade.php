@@ -66,8 +66,7 @@
 
                             <td>
                                 <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%"
-                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </td>
                             <td>
@@ -75,7 +74,7 @@
                             </td>
 
                             <td>
-                                <a class="btn btn-info" href="{{ route('shops.edit', $shop->id) }}">See more</a>
+                                <a class="btn btn-info" href="{{ route('seller.shop-edit', $shop->id) }}">See more</a>
                             </td>
                         </tr>
                         @endforeach
