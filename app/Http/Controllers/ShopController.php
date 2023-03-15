@@ -94,7 +94,6 @@ class ShopController extends Controller
     {
         $shop = Shop::find($id);
         $shop->delete();
-        return redirect()->route('shops.index');
 
         if (Auth::user()->type == 'admin') {
             return redirect()->route('shops.index');
