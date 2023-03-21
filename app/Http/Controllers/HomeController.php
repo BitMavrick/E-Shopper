@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Shop;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,6 +15,13 @@ class HomeController extends Controller
         //session()->flash('message', 'Success! This is the home page');
         //session()->flash('alert-type', 'alert-success');
         return view('user.index');
+    }
+
+    public function category($id)
+    {
+        $products = Product::where('category_id', $id)->orderBy('created_at', 'desc')->paginate(9);
+        $category = Category::find($id);
+        return view('user.category', compact('products', 'category'));
     }
 
     public function shop($id)

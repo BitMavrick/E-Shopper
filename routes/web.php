@@ -12,6 +12,7 @@ use App\Http\Controllers\SellerController;
 
 // Home routes
 Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/category/{id}', [HomeController::class, 'category'])->name('category');
 Route::get('/shop/{id}', [HomeController::class, 'shop'])->name('shop');
 Route::get('/product/{id}', [HomeController::class, 'product'])->name('product');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
