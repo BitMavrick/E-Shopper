@@ -89,7 +89,8 @@
                     id="navbar-vertical">
                     <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                         @foreach($categories as $category)
-                        <a href="#" class="nav-item nav-link">{{ $category->name }}</a>
+                        <a href="{{ route('category', $category->id) }}"
+                            class="nav-item nav-link">{{ $category->name }}</a>
                         @endforeach
                     </div>
                 </nav>
